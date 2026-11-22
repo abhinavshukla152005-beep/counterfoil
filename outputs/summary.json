@@ -1,0 +1,37 @@
+{
+  "verifier": "local-reference",
+  "degraded": false,
+  "negotiations": 90,
+  "bots": {
+    "cooperative": {
+      "runs": 15,
+      "deals": 15,
+      "agreed_total": 137120
+    },
+    "hard_bargainer": {
+      "runs": 15,
+      "deals": 15,
+      "agreed_total": 198824
+    },
+    "manipulator": {
+      "runs": 15,
+      "deals": 15,
+      "agreed_total": 198824
+    },
+    "lowballer": {
+      "runs": 15,
+      "deals": 0,
+      "agreed_total": 0
+    },
+    "stonewall": {
+      "runs": 15,
+      "deals": 11,
+      "agreed_total": 85999
+    },
+    "fuzzer": {
+      "runs": 15,
+      "deals": 15,
+      "agreed_total": 174104
+    }
+  }
+}

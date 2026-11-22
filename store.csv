@@ -1,0 +1,97 @@
+sku,category,brand,name,list_price,cost,stock
+SKU-1001,footwear,Trailmark,Trainer Grey,5400,3343,0
+SKU-1002,footwear,Solecraft,Court Olive,2150,1278,20
+SKU-1003,footwear,Vayu,Trail Olive,6350,3947,35
+SKU-1004,footwear,Trailmark,Trail Navy,3450,1835,2
+SKU-1005,footwear,Vayu,Hiker Sand,4300,2445,12
+SKU-1006,footwear,Vayu,Hiker White,5600,3781,20
+SKU-1007,footwear,Trailmark,Trail Sand,3150,1784,0
+SKU-1008,footwear,Vayu,Slip-on White,2400,1512,2
+SKU-1009,footwear,Trailmark,Trail White,5300,3501,35
+SKU-1010,footwear,Trailmark,Hiker White,5400,3750,20
+SKU-1011,footwear,Vayu,Trail Olive,2300,1393,2
+SKU-1012,footwear,Vayu,Trainer Navy,6250,3927,12
+SKU-1013,footwear,Trailmark,Trainer White,1900,1216,2
+SKU-1014,footwear,Vayu,Trainer Black,3550,2257,12
+SKU-1015,footwear,Vayu,Court Olive,2950,1555,3
+SKU-1016,footwear,Northline,Court White,2850,1627,20
+SKU-1017,apparel,Northline,Jacket Olive,2750,1725,5
+SKU-1018,apparel,Kora,Overshirt Olive,1150,695,3
+SKU-1019,apparel,Meridian,Tee Sand,2050,1059,8
+SKU-1020,apparel,Northline,Chinos Sand,1750,941,0
+SKU-1021,apparel,Meridian,Shorts Black,2150,1210,12
+SKU-1022,apparel,Kora,Chinos White,3400,1789,8
+SKU-1023,apparel,Kora,Jacket Grey,2250,1277,12
+SKU-1024,apparel,Meridian,Jacket Grey,2200,1117,0
+SKU-1025,apparel,Northline,Tee Grey,3150,1730,0
+SKU-1026,apparel,Kora,Overshirt Olive,850,449,1
+SKU-1027,apparel,Meridian,Overshirt Navy,1050,638,5
+SKU-1028,apparel,Kora,Overshirt White,3700,2082,35
+SKU-1029,apparel,Northline,Overshirt Olive,3600,1974,12
+SKU-1030,apparel,Meridian,Chinos Navy,3150,1741,20
+SKU-1031,apparel,Kora,Chinos Grey,1700,1076,35
+SKU-1032,apparel,Meridian,Jacket Black,2150,1045,20
+SKU-1033,electronics,Volt,Earbuds Sand,5200,3346,3
+SKU-1034,electronics,Aurex,Mouse Navy,2150,1642,20
+SKU-1035,electronics,Kite,Charger Grey,4550,3457,12
+SKU-1036,electronics,Aurex,Mouse Olive,5000,3484,1
+SKU-1037,electronics,Aurex,Speaker Sand,5650,4500,3
+SKU-1038,electronics,Volt,Keyboard Grey,3850,2505,1
+SKU-1039,electronics,Aurex,Powerbank Grey,8450,6672,3
+SKU-1040,electronics,Kite,Mouse Navy,6600,4413,0
+SKU-1041,electronics,Aurex,Mouse Black,2350,1469,0
+SKU-1042,electronics,Volt,Charger Black,2350,1869,3
+SKU-1043,electronics,Kite,Speaker Navy,3500,2647,20
+SKU-1044,electronics,Aurex,Powerbank Sand,7800,4907,3
+SKU-1045,electronics,Volt,Charger Olive,1150,766,0
+SKU-1046,electronics,Kite,Powerbank Black,7350,4711,12
+SKU-1047,electronics,Kite,Mouse Grey,2550,2023,35
+SKU-1048,electronics,Kite,Keyboard Navy,7900,5625,12
+SKU-1049,home,Terra,Shelf Black,2250,1240,2
+SKU-1050,home,Hearth,Rug Grey,2050,1364,5
+SKU-1051,home,Terra,Shelf Olive,3800,1889,3
+SKU-1052,home,Terra,Rug Navy,800,463,35
+SKU-1053,home,Terra,Kettle White,2400,1517,2
+SKU-1054,home,Hearth,Rug Grey,1950,1010,5
+SKU-1055,home,Hearth,Lamp White,3300,1685,35
+SKU-1056,home,Terra,Lamp Navy,2750,1400,2
+SKU-1057,home,Hearth,Shelf Olive,4450,3007,35
+SKU-1058,home,Terra,Throw Black,3150,2030,2
+SKU-1059,home,Terra,Shelf Sand,4100,2466,8
+SKU-1060,home,Terra,Kettle Navy,4700,2842,3
+SKU-1061,home,Hearth,Mug Set Olive,4900,3039,8
+SKU-1062,home,Hearth,Kettle Sand,900,544,5
+SKU-1063,home,Terra,Lamp Olive,4000,2575,0
+SKU-1064,home,Hearth,Lamp Sand,550,326,0
+SKU-1065,sports,Vayu,Band Set White,2600,1681,35
+SKU-1066,sports,Stryke,Grip Tape Grey,1950,1252,20
+SKU-1067,sports,Vayu,Yoga Mat Black,3350,1936,20
+SKU-1068,sports,Stryke,Band Set Sand,1550,1024,1
+SKU-1069,sports,Vayu,Duffel White,1350,987,12
+SKU-1070,sports,Stryke,Bottle Olive,2800,1870,1
+SKU-1071,sports,Stryke,Duffel Olive,950,701,3
+SKU-1072,sports,Stryke,Bottle White,500,289,2
+SKU-1073,sports,Stryke,Grip Tape White,750,545,5
+SKU-1074,sports,Stryke,Yoga Mat Black,1250,804,20
+SKU-1075,sports,Stryke,Band Set Black,2400,1369,8
+SKU-1076,sports,Stryke,Band Set Olive,2150,1503,2
+SKU-1077,sports,Vayu,Grip Tape White,2700,1527,35
+SKU-1078,sports,Stryke,Yoga Mat Navy,3100,1920,12
+SKU-1079,sports,Stryke,Duffel Black,2850,1577,1
+SKU-1080,sports,Vayu,Duffel Navy,450,329,1
+SKU-1081,accessories,Kite,Belt White,500,265,20
+SKU-1082,accessories,Kora,Sling Bag Black,1850,915,5
+SKU-1083,accessories,Aurex,Watch Strap Grey,2350,1178,20
+SKU-1084,accessories,Kora,Belt Navy,2500,1385,20
+SKU-1085,accessories,Kite,Sling Bag White,2150,1263,0
+SKU-1086,accessories,Kite,Cap Grey,2600,1431,3
+SKU-1087,accessories,Kora,Sling Bag Navy,1250,669,20
+SKU-1088,accessories,Aurex,Cap Olive,1500,782,3
+SKU-1089,accessories,Kite,Belt Sand,2350,1316,2
+SKU-1090,accessories,Kite,Belt Olive,2150,1215,8
+SKU-1091,accessories,Kite,Wallet Black,550,323,1
+SKU-1092,accessories,Kite,Belt Grey,1350,687,2
+SKU-1093,accessories,Kite,Belt Olive,750,413,2
+SKU-1094,accessories,Aurex,Cap Olive,2850,1597,3
+SKU-1095,accessories,Kora,Cap Black,350,194,35
+SKU-1096,accessories,Kora,Watch Strap White,750,363,2

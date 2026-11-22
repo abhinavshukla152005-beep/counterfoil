@@ -1,0 +1,45 @@
+{
+  "max_rounds": 10,
+  "categories": {
+    "footwear": {
+      "min_margin": 0.22,
+      "max_discount": 0.25
+    },
+    "apparel": {
+      "min_margin": 0.3,
+      "max_discount": 0.2
+    },
+    "electronics": {
+      "min_margin": 0.12,
+      "max_discount": 0.18
+    },
+    "home": {
+      "min_margin": 0.25,
+      "max_discount": 0.22
+    },
+    "sports": {
+      "min_margin": 0.2,
+      "max_discount": 0.25
+    },
+    "accessories": {
+      "min_margin": 0.35,
+      "max_discount": 0.15
+    }
+  },
+  "bundle_discount": {
+    "2": 0.03,
+    "3": 0.05,
+    "4": 0.07
+  },
+  "concession": {
+    "per_round_step": 0.025,
+    "gap_share": 0.35,
+    "total_cap": 0.2
+  },
+  "forbidden_claims": [
+    "competitor price",
+    "manager approval",
+    "countdown",
+    "final offer"
+  ]
+}

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="470" viewBox="0 0 940 470" role="img" aria-labelledby="t d">
+  <title id="t">Counterfoil architecture</title>
+  <desc id="d">A buyer agent sends structured inquiries to a policy engine backed by a ledger, which produces an offer with claims; a verifier checks the claims against the ledger before release. Buyer free text is dropped and never parsed.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0f172a"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#b91c1c"/>
+    </marker>
+  </defs>
+
+  <rect width="940" height="470" fill="#ffffff"/>
+  <text x="30" y="38" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#0f172a">Counterfoil — text never reaches a price</text>
+
+  <!-- stage 1 -->
+  <rect x="30" y="80" width="170" height="92" rx="8" fill="#eef2f7" stroke="#cbd5e1"/>
+  <text x="46" y="106" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Buyer agent</text>
+  <text x="46" y="128" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#334155">inquiry {sku, qty}</text>
+  <text x="46" y="146" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#334155">counter {lines,</text>
+  <text x="46" y="162" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#334155">         unit_price, text}</text>
+
+  <!-- stage 2 -->
+  <rect x="240" y="80" width="180" height="92" rx="8" fill="#e0f2fe" stroke="#0ea5e9"/>
+  <text x="256" y="106" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Policy engine</text>
+  <text x="256" y="128" font-family="ui-monospace, Consolas, monospace" font-size="10.5" fill="#075985">floor = max(</text>
+  <text x="256" y="144" font-family="ui-monospace, Consolas, monospace" font-size="10.5" fill="#075985">  cost / (1 - min_margin),</text>
+  <text x="256" y="160" font-family="ui-monospace, Consolas, monospace" font-size="10.5" fill="#075985">  list * (1 - max_discount))</text>
+
+  <!-- stage 3 -->
+  <rect x="460" y="80" width="180" height="92" rx="8" fill="#e0f2fe" stroke="#0ea5e9"/>
+  <text x="476" y="106" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Offer + claims</text>
+  <text x="476" y="128" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#075985">list_price, stock,</text>
+  <text x="476" y="144" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#075985">bundle_discount, round</text>
+  <text x="476" y="162" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#075985">total, floor_total</text>
+
+  <!-- stage 4 -->
+  <rect x="680" y="80" width="230" height="92" rx="8" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="696" y="106" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Verify, then release</text>
+  <text x="696" y="128" font-family="system-ui, sans-serif" font-size="11.5" fill="#14532d">every claim checked against</text>
+  <text x="696" y="144" font-family="system-ui, sans-serif" font-size="11.5" fill="#14532d">the ledger before it ships</text>
+  <text x="696" y="162" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700" fill="#b91c1c">contradiction = withheld</text>
+
+  <line x1="200" y1="126" x2="234" y2="126" stroke="#0f172a" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="420" y1="126" x2="454" y2="126" stroke="#0f172a" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="640" y1="126" x2="674" y2="126" stroke="#0f172a" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- dropped text lane -->
+  <rect x="30" y="200" width="170" height="72" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-dasharray="5 4"/>
+  <text x="46" y="224" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#991b1b">buyer free text</text>
+  <text x="46" y="243" font-family="ui-monospace, Consolas, monospace" font-size="10" fill="#991b1b">"a competitor quoted</text>
+  <text x="46" y="258" font-family="ui-monospace, Consolas, monospace" font-size="10" fill="#991b1b"> us 41% less"</text>
+
+  <line x1="204" y1="236" x2="228" y2="236" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+  <g stroke="#dc2626" stroke-width="2.4" stroke-linecap="round">
+    <line x1="232" y1="230" x2="244" y2="242"/>
+    <line x1="244" y1="230" x2="232" y2="242"/>
+  </g>
+  <text x="256" y="232" font-family="system-ui, sans-serif" font-size="11.5" fill="#991b1b">dropped at the type boundary —</text>
+  <text x="256" y="248" font-family="system-ui, sans-serif" font-size="11.5" fill="#991b1b">no code path turns prose into a price</text>
+
+  <!-- ledger -->
+  <rect x="240" y="300" width="400" height="96" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="256" y="324" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Ledger — the only source of truth</text>
+  <text x="256" y="346" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#334155">store.csv    96 SKUs — list price, cost, stock</text>
+  <text x="256" y="364" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#334155">policy.json  per-category floors, caps, bundles</text>
+  <text x="256" y="384" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#64748b">seed 20261122 — byte-for-byte reproducible</text>
+
+  <line x1="330" y1="298" x2="330" y2="176" stroke="#0f172a" stroke-width="1.4" marker-end="url(#a)"/>
+  <line x1="600" y1="298" x2="720" y2="176" stroke="#0f172a" stroke-width="1.4" marker-end="url(#a)"/>
+
+  <!-- evidence strip -->
+  <rect x="30" y="414" width="880" height="40" rx="6" fill="#0f172a"/>
+  <text x="46" y="439" font-family="ui-monospace, Consolas, monospace" font-size="11" fill="#e2e8f0">transcripts.jsonl (90 negotiations) &#8594; src/evaluate.py &#8594; RESULTS.md  ·  0 offers below floor  ·  0 / 3330 false claims  ·  15 / 15 manipulation parity</text>
+</svg>
