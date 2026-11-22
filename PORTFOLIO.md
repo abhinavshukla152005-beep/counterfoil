@@ -21,28 +21,36 @@ structured claims about list price, stock and the bundle rate, and a verifier
 checks every claim against the ledger before the offer is released. If one
 contradicts, the offer is withheld.
 
-Then I proved it rather than asserting it. Ninety logged negotiations against
-six buyer policies, one of which lies on every single turn with fake competitor
-quotes and a prompt injection. The price path came out identical to the honest
-control on all fifteen paired seeds. Zero of 495 offers went below the margin
-floor. And it runs at a few thousand negotiations per second because there is no
-model on the decision path.
+Then I measured it on the judges' own code, not mine. My seller implements the
+official starter kit's interface, and the kit's `evaluate.py` scores it 51.6
+against 48.5 for the kit's own example seller over 210 negotiations — with zero
+policy violations, zero truthfulness violations and zero deadlocks, where the
+example deadlocks 21 times.
+
+Then I broke it on purpose. Ninety more negotiations through my own stricter
+protocol, against six buyer policies, one of which lies on every single turn
+with fake competitor quotes, fake manager approval and a prompt injection. The
+price path came out identical to the honest control on all fifteen paired
+seeds. Zero of 495 offers went below the margin floor. And it runs at thousands
+of negotiations per second because there is no model on the decision path.
 
 ## Resume bullets
 
 Pick two. Do not use all three; three bullets for one project reads as padding.
 
 - Built a policy-constrained seller agent for agent-to-agent commerce (Python,
-  standard library only) that prices from a ledger and verifies every claim
-  before release — 0 of 495 published offers below the margin floor and 0 of
-  3,330 structured claims contradicted across 90 logged negotiations.
-- Wrote an adversarial evaluation harness with six buyer policies; a bot
-  injecting fake competitor quotes, fake manager approval and a
-  `SYSTEM OVERRIDE` prompt produced a bit-identical offer path to the honest
-  control on 15 of 15 paired seeds.
-- Hardened the negotiation protocol against malformed input — 75 invalid
-  counters rejected with typed errors and zero crashes — and pinned the
-  invariants with a 16-test dependency-free suite that runs in one command.
+  standard library only) that implements the official Techfest x Rezolve Labs
+  harness interface and **scores 51.6 against the kit's 48.5 example seller** —
+  158 of 162 feasible deals closed, 0 policy violations, 0 truthfulness
+  violations, 0 deadlocks over 210 negotiations.
+- Wrote an adversarial harness with six buyer policies; a bot injecting fake
+  competitor quotes, fake manager approval and a policy-override instruction
+  produced a bit-identical offer path to the honest control on 15 of 15 paired
+  seeds, because buyer text is dropped before it can reach a number.
+- Pinned both interfaces with 27 dependency-free invariant tests (16 stress,
+  11 official-format) covering the floor, stock clamping, extra-line rejection
+  and the final-round close-or-walk rule; one command regenerates every
+  published figure from the transcripts.
 
 ## LinkedIn project entry
 
@@ -58,12 +66,15 @@ engine over the store; buyer text is dropped at the type boundary. Every offer
 carries structured claims that a verifier checks against the ledger before
 release, and a contradiction withholds the offer rather than shipping it.
 
-Evidence is measured, not claimed: 90 logged negotiations, 0 offers below the
-margin floor, 0 of 3,330 claims contradicted, and a manipulation bot whose
-adversarial text produces an identical price path to the honest control on all
+Evidence is measured on the challenge's own scoring code: 210 official
+negotiations score 51.6 against 48.5 for the starter kit's example seller, with
+0 policy violations, 0 truthfulness violations and 0 deadlocks (the example
+deadlocks 21 times). A separate 90-negotiation adversarial harness shows a
+manipulation bot producing an identical price path to the honest control on all
 15 paired seeds. Zero inference cost per turn.
 
-Python, standard library only. `python run_all.py` reproduces every number.
+Python, standard library only. `python run_official.py` and `python run_all.py`
+reproduce every number.
 
 ## Questions this invites, and the honest answers
 
@@ -94,9 +105,10 @@ attack surface disappears without a single defensive prompt.
 ## What a recruiter should click
 
 1. The README, top to bottom — 60 seconds.
-2. `outputs/RESULTS.md` — the numbers, regenerated from transcripts.
-3. `src/seller.py` — the only file with the pricing logic in it.
-4. `python -m src.demo --parity --seed 3` — the proof, in four seconds.
+2. `outputs/OFFICIAL_RESULTS.md` — the score against the judges' own harness.
+3. `outputs/RESULTS.md` — the adversarial numbers, regenerated from transcripts.
+4. `seller.py` — the official-format seller, and the only pricing logic in it.
+5. `python -m src.demo --parity --seed 3` — the proof, in four seconds.
 
 ## Honest limits — keep these in the README, not hidden
 

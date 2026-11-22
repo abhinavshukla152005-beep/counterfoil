@@ -7,12 +7,18 @@ Challenge 2, *Selling to Machines*. Round 1 closes **30 Nov 2026, 23:59 IST**.
 
 | Requirement | File / action | Status |
 |---|---|---|
-| Abstract, max 500 words — impact, cost estimate, innovation, build summary | `ABSTRACT.md` (488 words) | done |
+| Abstract, max 500 words — impact, cost estimate, innovation, build summary | `ABSTRACT.md` (497 words) | done |
 | 3-minute demo video | `DEMO-SCRIPT.md` — you record it | **yours** |
-| Code repository and outputs on the public dev set | this folder + `outputs/` | done, needs publishing |
+| Code repository and outputs on the public dev set | `seller.py` loads into the kit's `evaluate.py`; `outputs/OFFICIAL_RESULTS.md` + `outputs/official_transcripts.jsonl` are the default-run output | done, needs publishing |
 | List of Rezolve Labs capabilities used | `ARCHITECTURE.md`, section *Rezolve Labs capabilities used* | done |
 
-## The three things only you can do
+The "public dev set" is the starter kit: `store.csv`, `policy.json`,
+`harness.py`, `buyers.py`, `evaluate.py`. It is vendored unmodified at
+`kit/ps2-selling-to-machines` so the pack runs with no download. `seller.py`
+implements that kit's `Seller(store, policy)` interface, and
+`python run_official.py` reproduces the recorded run against it.
+
+## The four things only you can do
 
 1. **Register and get a Team ID.** `techfest.org` sign-in is a Google account
    (Firebase). Registration is what produces the Team ID; nothing can be
@@ -27,12 +33,10 @@ Challenge 2, *Selling to Machines*. Round 1 closes **30 Nov 2026, 23:59 IST**.
    a hosted run is strictly better evidence than an offline one.
 3. **Record the video.** One take, screen plus voice, under three minutes.
    `DEMO-SCRIPT.md` has the beats, the timings and the exact commands.
+4. **Upload one folder to Drive and paste the link.** Layout below. Set sharing
+   to "anyone with the link can view" or judges get a request screen.
 
 ## Drive folder to upload
-
-One folder, this layout, link pasted into the form's *Submission Link* field.
-Google Drive links must be set to "anyone with the link can view" or judges
-will get a request screen instead of the files.
 
 ```
 Counterfoil-AgentX/
@@ -42,16 +46,26 @@ Counterfoil-AgentX/
 ├── DEMO-SCRIPT.md
 ├── SUBMISSION.md
 ├── PORTFOLIO.md
-├── docs/architecture.svg
-├── policy.json
-├── store.csv
-├── run_all.py
-├── src/                     catalog, seller, bots, rezolve, harness, evaluate, demo
-├── tests/test_invariants.py
+├── seller.py                 the Seller class the kit's evaluate.py loads
+├── run_official.py           reproduces the official run
+├── run_all.py                reproduces the stress harness
+├── kit/
+│   └── ps2-selling-to-machines/   the challenge starter kit, unmodified
+├── policy.json               stress-store policy
+├── store.csv                 stress-store catalogue
+├── docs/
+│   └── architecture.svg
+├── src/                      catalog, seller, bots, rezolve, harness, evaluate, demo
+├── tests/
+│   ├── test_invariants.py           16 stress-protocol properties
+│   └── test_official_seller.py      11 official-format properties
 └── outputs/
-    ├── RESULTS.md           the scored report
-    ├── transcripts.jsonl    all 90 negotiations, message by message
-    └── summary.json         per-policy roll-up
+    ├── OFFICIAL_RESULTS.md           official score, per buyer
+    ├── official_results.json         every scenario, scored
+    ├── official_transcripts.jsonl    all 210 official negotiations
+    ├── RESULTS.md                    stress-harness report
+    ├── transcripts.jsonl             all 90 stress negotiations
+    └── summary.json                  per-policy roll-up
 ```
 
 If you also publish a public repository (GitHub), put that URL in the form
@@ -61,22 +75,22 @@ Exclude `__pycache__/` and `.venv/`.
 ## Verify before you submit
 
 ```bash
-python run_all.py
+python tests/test_official_seller.py   # expect 11/11
+python run_all.py                      # expect 16/16 and invariants OK
+python run_official.py                 # expect SCORE 51.6 (example 48.5)
 ```
 
-Expect `16/16 passed` and `RESULTS.md written; invariants OK`. If either fails,
-do not submit — the failure is real.
+If any of the three fails, do not submit — the failure is real.
 
 ## What the numbers will say
 
-Pull these from `outputs/RESULTS.md` at submission time rather than from this
-file, because they regenerate:
+Pull these from the generated files at submission time rather than from this
+one, because they regenerate:
 
-- offers released and re-priced from the store
-- offers below the floor: must be 0
-- claims contradicted: must be 0
-- manipulator parity: must be n/n
-- malformed messages handled
+- `outputs/OFFICIAL_RESULTS.md`: score, deal rate where possible, margin kept,
+  policy violations (must be 0), truthfulness violations (must be 0), deadlocks
+- `outputs/RESULTS.md`: offers below floor (must be 0), claims contradicted
+  (must be 0), manipulator parity (must be n/n), malformed messages handled
 
 ## Honest scope, stated up front
 
@@ -86,7 +100,10 @@ Worth saying plainly in the form's notes field, because a judge will notice it:
   not a shortcut — it is what makes the floor invariant and the manipulation
   resistance testable rather than probabilistic. No model is on the decision
   path, so inference cost per turn is zero.
-- Every figure in `RESULTS.md` comes from synthetic buyer policies in
+- The 51.6 is against the kit's three rule-based bots. The hidden run uses
+  agentic buyers, which may price and argue differently; the floor, the
+  no-text-pricing rule and the trick rejection do not depend on their behaviour.
+- Every stress-harness figure comes from synthetic buyer policies in
   `src/bots.py`. No real marketplace logs were used.
 - The claim verifier ran in `local-reference` mode unless a Rezolve key was
   configured. Both implementations satisfy the same contract and the test suite

@@ -15,7 +15,7 @@ All figures are recomputed from `outputs/transcripts.jsonl`; none are typed by h
 | Manipulator rounds identical to the honest control | **15 / 15** |
 | Repeat runs bit-identical | **3 / 3** |
 | Malformed buyer messages rejected with a typed error | **75** |
-| Negotiations per second (single core, pure Python) | **3504** |
+| Negotiations per second (single core, pure Python) | **3418** |
 
 ## Per policy
 
