@@ -54,6 +54,10 @@ Pick two. Do not use all three; three bullets for one project reads as padding.
 
 ## LinkedIn project entry
 
+**Added to the profile on 2026-11-22** (Projects → Counterfoil, Nov 2026 –
+Present, with the GitHub repository attached as media). The text below is what
+was used; keep edits in sync with `ABSTRACT.md` if the numbers regenerate.
+
 **Title:** Counterfoil — a seller agent that cannot be talked off the ledger
 **Description:**
 
