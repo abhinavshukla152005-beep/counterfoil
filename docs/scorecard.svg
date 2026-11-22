@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="400" viewBox="0 0 940 400" role="img" aria-labelledby="t d">
+  <title id="t">Counterfoil on the official harness: 51.6 against the example seller's 48.5, with zero deadlocks against 21</title>
+  <desc id="d">Bar chart of the challenge starter kit's own scores over 210 negotiations. Counterfoil scores 51.6 and the kit's example seller 48.5. Counterfoil deadlocks 0 times, the example 21 times. Below: 158 of 162 feasible deals closed, margin kept 0.686, zero policy violations, zero truthfulness violations, whole run under two seconds.</desc>
+
+  <rect width="940" height="400" fill="#ffffff"/>
+  <text x="30" y="42" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#0f172a">Official harness score</text>
+  <text x="30" y="66" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" fill="#475569">Techfest IIT Bombay x Rezolve Labs, Challenge 2 — scored by the starter kit's own evaluate.py, 210 negotiations, seed 0.</text>
+
+  <!-- score panel -->
+  <rect x="30" y="86" width="880" height="132" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="52" y="114" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#0f172a">Score (0–100)</text>
+  <text x="52" y="134" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" fill="#64748b">higher is better · value − violations − deadlock penalties</text>
+
+  <text x="52" y="164" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" fill="#0f172a">Counterfoil</text>
+  <rect x="150" y="151" width="341" height="18" rx="4" fill="#0f766e"/>
+  <text x="503" y="165" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#0f766e">51.6</text>
+
+  <text x="52" y="196" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" fill="#0f172a">example_seller</text>
+  <rect x="150" y="183" width="320" height="18" rx="4" fill="#94a3b8"/>
+  <text x="482" y="197" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#475569">48.5</text>
+
+  <!-- deadlock panel -->
+  <rect x="30" y="232" width="880" height="104" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="52" y="258" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#0f172a">Deadlocks</text>
+  <text x="52" y="276" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" fill="#64748b">negotiations that hit the round cap without a deal or a walk-away · lower is better</text>
+
+  <text x="52" y="300" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" fill="#0f172a">Counterfoil</text>
+  <rect x="150" y="289" width="6" height="14" rx="3" fill="#0f766e"/>
+  <text x="168" y="301" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#0f766e">0</text>
+
+  <text x="52" y="322" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12" fill="#0f172a">example_seller</text>
+  <rect x="150" y="311" width="378" height="14" rx="4" fill="#fca5a5"/>
+  <text x="540" y="323" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#b91c1c">21</text>
+
+  <!-- metric strip -->
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" fill="#0f172a">
+    <text x="30" y="368" font-size="12" font-weight="600">158 / 162</text>
+    <text x="30" y="384" font-size="11" fill="#64748b">feasible deals closed</text>
+
+    <text x="185" y="368" font-size="12" font-weight="600">0.686</text>
+    <text x="185" y="384" font-size="11" fill="#64748b">margin kept on deals</text>
+
+    <text x="340" y="368" font-size="12" font-weight="600">0</text>
+    <text x="340" y="384" font-size="11" fill="#64748b">policy violations</text>
+
+    <text x="480" y="368" font-size="12" font-weight="600">0</text>
+    <text x="480" y="384" font-size="11" fill="#64748b">truthfulness violations</text>
+
+    <text x="650" y="368" font-size="12" font-weight="600">&lt; 2 s</text>
+    <text x="650" y="384" font-size="11" fill="#64748b">whole run, one core</text>
+  </g>
+</svg>

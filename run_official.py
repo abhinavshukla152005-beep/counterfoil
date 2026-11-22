@@ -44,8 +44,10 @@ def markdown(summary, per_buyer, base, args):
     lines = [
         "# Official harness run — Techfest PS2 *Selling to Machines*",
         "",
-        f"Command: `KIT=<starter kit> python run_official.py --n {args.n} --seed {args.seed} "
+        f"Command: `python run_official.py --n {args.n} --seed {args.seed} "
         f"--workers {args.workers}`",
+        "",
+        "The starter kit is vendored unmodified at `kit/ps2-selling-to-machines`; set `KIT=` to use your own copy.",
         "",
         "The seller is `seller.py`, which implements the kit's `Seller(store, policy)` interface.",
         "Every figure below is computed by the kit's own `evaluate.py`; none is typed by hand.",

@@ -40,11 +40,11 @@ produced an identical offer path to the honest control in 15 of 15 paired
 seeds. 75 malformed messages were rejected with typed errors and no crash.
 
 **Cost.** Zero inference cost per turn: no language model sits on the
-decision path. Roughly 0.15 ms per turn, and over 3,000 negotiations per second:
-a million negotiations is under six minutes of one core. An LLM seller spending
-two thousand tokens a turn over five turns costs ten thousand per negotiation,
-and cannot offer the same guarantee, because a model that reads attacker text
-is the attack surface.
+decision path. A full five-round haggle takes under 0.3 ms, so one core runs
+over 3,000 negotiations a second: a million is under six minutes. An LLM seller
+at two thousand tokens a turn over five turns costs ten thousand per
+negotiation, and still cannot promise the floor, because a model reading
+attacker text is the attack surface.
 
 **Next.** Point the verifier at the hosted Rezolve Labs TraceWare endpoint, bind
 counters to authenticated buyer identity, and replay real marketplace logs in

@@ -1,6 +1,8 @@
 # Official harness run — Techfest PS2 *Selling to Machines*
 
-Command: `KIT=<starter kit> python run_official.py --n 210 --seed 0 --workers 1`
+Command: `python run_official.py --n 210 --seed 0 --workers 1`
+
+The starter kit is vendored unmodified at `kit/ps2-selling-to-machines`; set `KIT=` to use your own copy.
 
 The seller is `seller.py`, which implements the kit's `Seller(store, policy)` interface.
 Every figure below is computed by the kit's own `evaluate.py`; none is typed by hand.

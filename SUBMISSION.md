@@ -7,7 +7,7 @@ Challenge 2, *Selling to Machines*. Round 1 closes **30 Nov 2026, 23:59 IST**.
 
 | Requirement | File / action | Status |
 |---|---|---|
-| Abstract, max 500 words — impact, cost estimate, innovation, build summary | `ABSTRACT.md` (497 words) | done |
+| Abstract, max 500 words — impact, cost estimate, innovation, build summary | `ABSTRACT.md` (498 words) | done |
 | 3-minute demo video | `DEMO-SCRIPT.md` — you record it | **yours** |
 | Code repository and outputs on the public dev set | `seller.py` loads into the kit's `evaluate.py`; `outputs/OFFICIAL_RESULTS.md` + `outputs/official_transcripts.jsonl` are the default-run output | done, needs publishing |
 | List of Rezolve Labs capabilities used | `ARCHITECTURE.md`, section *Rezolve Labs capabilities used* | done |
@@ -54,7 +54,8 @@ Counterfoil-AgentX/
 ├── policy.json               stress-store policy
 ├── store.csv                 stress-store catalogue
 ├── docs/
-│   └── architecture.svg
+│   ├── architecture.svg
+│   └── scorecard.svg         official score, as a picture
 ├── src/                      catalog, seller, bots, rezolve, harness, evaluate, demo
 ├── tests/
 │   ├── test_invariants.py           16 stress-protocol properties

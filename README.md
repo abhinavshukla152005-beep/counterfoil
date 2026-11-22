@@ -9,6 +9,8 @@ The claim in one line: **language never reaches the price.** A buyer bot can
 send any text it likes; the seller prices from a ledger, and every claim in
 every offer is verified against that ledger before the offer is released.
 
+![Counterfoil on the official harness: 51.6 against the example seller's 48.5, zero deadlocks against 21](docs/scorecard.svg)
+
 ![Counterfoil architecture](docs/architecture.svg)
 
 ## Run it on the official harness
@@ -129,7 +131,7 @@ buyer message  ->  parse structured lines  ->  policy engine  ->  offer + claims
 | `outputs/OFFICIAL_RESULTS.md` | the official-harness score and per-buyer table |
 | `seller.py` | the class the kit's `evaluate.py` loads |
 | `outputs/RESULTS.md` | the stress-harness numbers, regenerated from transcripts |
-| `ABSTRACT.md` | 497-word summary |
+| `ABSTRACT.md` | 498-word summary |
 | `ARCHITECTURE.md` | the design and the Rezolve capabilities used |
 | `DEMO-SCRIPT.md` | the three-minute video, shot by shot |
 | `SUBMISSION.md` | what goes in the Drive folder |
