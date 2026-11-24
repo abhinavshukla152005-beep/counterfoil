@@ -1,0 +1,6 @@
+cooperative
+hard_bargainer  Anchors low, then closes 42 percent of the remaining gap each round.
+manipulator     Same numbers as HardBargainer; every counter also carries a false claim.
+lowballer
+stonewall       Never moves. Tests that the seller keeps its floor and closes cleanly.
+fuzzer          Opens with a dead basket, then sends malformed counters before settling.

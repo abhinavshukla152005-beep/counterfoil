@@ -151,5 +151,30 @@ Don't run anything, just state it:
 
 ## Recording
 
-One take, no cuts, screen plus voice. 1080p, 30fps, under three minutes hard.
-Upload as unlisted or public YouTube and put the link in the submission form.
+The video is already built: `outputs/demo/counterfoil-demo.mp4`, 2:50, 1080p30,
+4.7 MB. It is generated, not filmed — `tools/make_demo_video.py` replays the
+captured output in `outputs/demo_capture/` and narrates the beats above with
+text-to-speech, so the screen shows the commands actually running and the
+numbers are the recorded ones.
+
+To rebuild after changing the code:
+
+```bash
+python tools/make_demo_video.py     # rewrites outputs/demo/counterfoil-demo.mp4
+```
+
+The capture files come from running the commands once:
+
+```bash
+python -m src.demo --list                                 > outputs/demo_capture/01_list.txt
+python run_official.py                                    > outputs/demo_capture/02_official.txt
+python -m src.demo --bot manipulator --seed 3             > outputs/demo_capture/03_manipulator.txt
+python -m src.demo --parity --seed 3                      > outputs/demo_capture/04_parity.txt
+python -m src.demo --bot lowballer --seed 2               > outputs/demo_capture/05_lowballer.txt
+python -m src.demo --bot cooperative --seed 5             > outputs/demo_capture/06_cooperative.txt
+python tests/test_official_seller.py                      > outputs/demo_capture/07_tests.txt
+python run_all.py                                         > outputs/demo_capture/08_runall.txt
+```
+
+Upload the mp4 to YouTube (unlisted or public) or include it in the Drive
+folder; the submission form needs one working link.

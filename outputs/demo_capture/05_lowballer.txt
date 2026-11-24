@@ -1,0 +1,39 @@
+buyer policy : lowballer
+verifier     : local-reference
+basket       : 2 requested lines
+   SKU-1010  x1  Hiker White (Trailmark)
+   SKU-1014  x2  Trainer Black (Vayu)
+
+[r1] SELLER offers 12,126 INR (2 lines)  claims verified 6/6
+         Round 1 of 10. 2 lines, 3 units. Bundle 3 percent. Stock checked against the store before this offer.
+         BUYER counters 6,669 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+[r2] SELLER offers 11,823 INR   claims verified 6/6
+         BUYER counters 6,503 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+[r3] SELLER offers 11,823 INR   claims verified 6/6
+         BUYER counters 6,503 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+[r4] SELLER offers 11,823 INR   claims verified 6/6
+         BUYER counters 6,503 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+[r5] SELLER offers 11,823 INR   claims verified 6/6
+         BUYER counters 6,503 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+[r6] SELLER offers 11,823 INR   claims verified 6/6
+         BUYER counters 6,503 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+[r7] SELLER offers 11,823 INR   claims verified 6/6
+         BUYER counters 6,503 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+[r8] SELLER offers 11,823 INR   claims verified 6/6
+         BUYER counters 6,503 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+[r9] SELLER offers 11,823 INR   claims verified 6/6
+         BUYER counters 6,503 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+[r10] SELLER offers 11,823 INR   claims verified 6/6
+         BUYER counters 6,503 INR
+         "This is my only number. It is 45 percent off list, take it or leave it."
+
+NO DEAL: below_floor_at_final_round (buyer best 6,503, floor 10,596)

@@ -1,0 +1,34 @@
+90 negotiations -> C:\Users\Abhinav Shukla\Documents\Qoder\2026-11-21\5722a3d6\agentx\outputs\transcripts.jsonl
+  cooperative     deals 15/15 (100%)
+  hard_bargainer  deals 15/15 (100%)
+  manipulator     deals 15/15 (100%)
+  lowballer       deals  0/15 (0%)
+  stonewall       deals 11/15 (73%)
+  fuzzer          deals 15/15 (100%)
+RESULTS.md written; invariants OK
+ok    store integrity
+ok    floor never crossed
+ok    text cannot move numbers
+ok    deterministic
+ok    fairness: same need, same offer
+ok    inventory respected
+ok    impossible inquiry rejected
+ok    every claim supported
+ok    verifier catches a lie
+ok    unknown claim fields are unknown
+ok    hosted verifier degrades safely
+ok    verifier selection follows environment
+ok    malformed counters are typed errors
+ok    below-floor buyer walks away
+ok    closed negotiation stays closed
+ok    fuzzer never crashes the seller
+
+16/16 passed
+
+== negotiate ==
+
+== score ==
+
+== invariants ==
+
+All steps passed. Report: C:\Users\Abhinav Shukla\Documents\Qoder\2026-11-21\5722a3d6\agentx\outputs\RESULTS.md

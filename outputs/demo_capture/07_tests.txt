@@ -1,0 +1,13 @@
+  ok  below_floor_bid_is_not_accepted
+  ok  empty_basket_walks_away
+  ok  extra_lines_are_never_accepted
+  ok  final_round_accepts_a_compliant_bid
+  ok  final_round_walks_when_far_below_floor
+  ok  floor_is_absolute
+  ok  malformed_counter_does_not_crash
+  ok  never_above_list
+  ok  over_stock_quantity_is_clamped
+  ok  start_resets_state
+  ok  text_is_never_read
+
+11/11 official-seller invariants hold

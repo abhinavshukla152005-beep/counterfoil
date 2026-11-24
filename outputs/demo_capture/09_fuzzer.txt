@@ -1,0 +1,33 @@
+buyer policy : fuzzer
+verifier     : local-reference
+basket       : 5 requested lines
+   SKU-1014  x3  Trainer Black (Vayu)
+   SKU-1011  x2  Trail Olive (Vayu)
+   SKU-1004  x1  Trail Navy (Trailmark)
+   SKU-1024  x2  Jacket Grey (Meridian)
+   SKU-9000  x1  no such product
+
+[r1] SELLER offers 17,767 INR (3 lines)  claims verified 8/8
+         Round 1 of 10. 3 lines, 6 units. Bundle 5 percent. Stock checked against the store before this offer.
+         unavailable: [{'sku': 'SKU-1024', 'reason': 'out_of_stock'}, {'sku': 'SKU-9000', 'reason': 'unknown_sku'}]
+         BUYER counters 0 INR
+         "empty counter"
+         SELLER rejects: counter must price exactly the offered lines
+         BUYER counters 10 INR
+         "invented sku"
+         SELLER rejects: counter must price exactly the offered lines
+         BUYER counters a malformed basket
+         "string price"
+         SELLER rejects: counter qty and unit_price must be integers
+         BUYER counters 8,827,164 INR
+         "quantity inflation"
+         SELLER rejects: quantity for SKU-1014 is fixed at 3
+         BUYER counters -30 INR
+         "negative price"
+         SELLER rejects: unit_price must be positive for SKU-1014
+         BUYER counters 6 INR
+         "one rupee"
+[r2] SELLER offers 17,323 INR   claims verified 8/8
+         BUYER accept  "Settling at your quote."
+
+DEAL at 17,323 INR (floor was 14,842, basis buyer_accepted_offer)

@@ -8,7 +8,7 @@ Challenge 2, *Selling to Machines*. Round 1 closes **30 Nov 2026, 23:59 IST**.
 | Requirement | File / action | Status |
 |---|---|---|
 | Abstract, max 500 words — impact, cost estimate, innovation, build summary | `ABSTRACT.md` (498 words) | done |
-| 3-minute demo video | `DEMO-SCRIPT.md` — you record it | **yours** |
+| 3-minute demo video | `outputs/demo/counterfoil-demo.mp4` — 2:50, 1080p, built from real captured runs | done, needs uploading |
 | Code repository and outputs on the public dev set | `seller.py` loads into the kit's `evaluate.py`; `outputs/OFFICIAL_RESULTS.md` + `outputs/official_transcripts.jsonl` are the default-run output | done, needs publishing |
 | List of Rezolve Labs capabilities used | `ARCHITECTURE.md`, section *Rezolve Labs capabilities used* | done |
 
@@ -18,7 +18,7 @@ The "public dev set" is the starter kit: `store.csv`, `policy.json`,
 implements that kit's `Seller(store, policy)` interface, and
 `python run_official.py` reproduces the recorded run against it.
 
-## The four things only you can do
+## The three things only you can do
 
 1. **Register and get a Team ID.** `techfest.org` sign-in is a Google account
    (Firebase). Registration is what produces the Team ID; nothing can be
@@ -31,10 +31,15 @@ implements that kit's `Seller(store, policy)` interface, and
    header of `RESULTS.md` changes from `local-reference` to
    `rezolve-traceware`. Do that before submitting if the coupon has arrived —
    a hosted run is strictly better evidence than an offline one.
-3. **Record the video.** One take, screen plus voice, under three minutes.
-   `DEMO-SCRIPT.md` has the beats, the timings and the exact commands.
-4. **Upload one folder to Drive and paste the link.** Layout below. Set sharing
-   to "anyone with the link can view" or judges get a request screen.
+3. **Upload one folder to Drive and paste the link.** Layout below, demo video
+   included. Set sharing to "anyone with the link can view" or judges get a
+   request screen.
+
+The demo video is already built: `outputs/demo/counterfoil-demo.mp4` (2:50,
+1080p, under the three-minute cap). It replays real captured runs from
+`outputs/demo_capture/` with narration, so it can be rebuilt at any time with
+`python tools/make_demo_video.py`. Upload it to YouTube (unlisted or public) and
+put the link in the form, or ship the file inside the Drive folder.
 
 ## Drive folder to upload
 
@@ -60,7 +65,12 @@ Counterfoil-AgentX/
 ├── tests/
 │   ├── test_invariants.py           16 stress-protocol properties
 │   └── test_official_seller.py      11 official-format properties
+├── tools/
+│   └── make_demo_video.py           rebuilds the demo video from the captures
 └── outputs/
+    ├── demo/
+    │   └── counterfoil-demo.mp4   the 2:50 demo video
+    ├── demo_capture/              the raw output the video replays
     ├── OFFICIAL_RESULTS.md           official score, per buyer
     ├── official_results.json         every scenario, scored
     ├── official_transcripts.jsonl    all 210 official negotiations

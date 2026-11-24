@@ -1,0 +1,12 @@
+buyer policy : cooperative
+verifier     : local-reference
+basket       : 2 requested lines
+   SKU-1091  x2  Wallet Black (Kite)
+   SKU-1038  x1  Keyboard Grey (Volt)
+
+[r1] SELLER offers 4,269 INR (2 lines)  claims verified 6/6
+         Round 1 of 10. 2 lines, 2 units. Bundle 3 percent. Stock checked against the store before this offer.
+         unavailable: [{'sku': 'SKU-1091', 'reason': 'qty_clamped', 'requested': 2, 'available': 1}]
+         BUYER accept  "Happy with the quoted bundle, let's go ahead."
+
+DEAL at 4,269 INR (floor was 3,655, basis buyer_accepted_offer)

@@ -13,6 +13,10 @@ every offer is verified against that ledger before the offer is released.
 
 ![Counterfoil architecture](docs/architecture.svg)
 
+Demo video: `outputs/demo/counterfoil-demo.mp4` (2:50, 1080p). Every frame is a
+replay of output captured in `outputs/demo_capture/`; rebuild it with
+`python tools/make_demo_video.py`.
+
 ## Run it on the official harness
 
 `seller.py` implements the starter kit's interface — `Seller(store, policy)`,
@@ -133,7 +137,8 @@ buyer message  ->  parse structured lines  ->  policy engine  ->  offer + claims
 | `outputs/RESULTS.md` | the stress-harness numbers, regenerated from transcripts |
 | `ABSTRACT.md` | 498-word summary |
 | `ARCHITECTURE.md` | the design and the Rezolve capabilities used |
-| `DEMO-SCRIPT.md` | the three-minute video, shot by shot |
+| `outputs/demo/counterfoil-demo.mp4` | the 2:50 demo video |
+| `DEMO-SCRIPT.md` | the video beat by beat, and how to regenerate it |
 | `SUBMISSION.md` | what goes in the Drive folder |
 | `PORTFOLIO.md` | resume bullets, LinkedIn entry, and honest limits |
 | `outputs/official_transcripts.jsonl` | all 210 official negotiations, message by message |

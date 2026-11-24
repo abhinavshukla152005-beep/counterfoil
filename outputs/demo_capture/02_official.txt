@@ -1,0 +1,7 @@
+negotiations 210 (162 feasible)
+deal rate    0.752   where possible 0.975
+margin kept  0.686
+violations   policy 0  truth 0
+deadlocks    0   seller walks 48
+SCORE        51.6   (example seller 48.5)
+wrote        C:\Users\Abhinav Shukla\Documents\Qoder\2026-11-21\5722a3d6\agentx\outputs\OFFICIAL_RESULTS.md
